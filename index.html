@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Monster Mayhem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="home" id="home">
+        <div class="blur"></div>
+        <div class="home-button">
+            <img src="./Asset Lainya/Play.png" width="15%" alt="" onclick="Play()">
+            <img src="./Asset Lainya/Profile.png" width="15%" alt="" onclick="openProfile()">
+            <img src="./Asset Lainya/Quit.png" width="15%" alt="" onclick="quitWindow()">
+        </div>
+        <div class="music-button">
+            <div class="music">
+                <img src="./Asset Lainya/Asset Music.png"  alt="">
+                <div class="line"></div>
+           </div>
+            <img src="./Asset Lainya/setting.png" alt="">
+        </div>
+        <div class="back-profile" id="profile">
+            <div class="title">
+                Profile
+            </div>
+            <div class="profile">
+                <div class="back"><img src="./Asset Lainya/Asset Back.png" width="60px" alt="" onclick="closeProfile()">
+                </div>
+                <img src="./Asset Lainya/Asset Profile.png" width="120px" class="prof-img" alt="">
+                <h1>Samuel Simanjuntak</h1>
+                <div class="status">
+                    <div class="achiv">
+                        <h1>achievements</h1>
+                        <div>
+                            <img src="./Achievements/Asset 1achievements.png" width="50px" alt="">
+                            <img src="./Achievements/Asset 2achievements.png" width="50px" alt="">
+                            <img src="./Achievements/Asset 3achievements.png" width="50px" alt="">
+                        </div>
+                    </div>
+                    <div class="level">
+                        <h1>status level</h1>
+                        <h2 id="profile">LV 1</h2>
+                    </div>
+                    <div class="unik-id">
+                        <h1>nomor unik</h1>
+                        <h2>0082-9820-03 </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map-level" id="map-level">
+        <div class="map-title">
+            <img src="./Asset Lainya/Map Level.png" width="30%" alt="">
+        </div>
+        <div class="map-button">
+            <img src="./Asset Lainya/Asset Back.png" width="100%" onclick="BackLvl()">
+            <div class="music">
+                <img src="./Asset Lainya/Asset Music.png"  alt="">
+                <div class="line"></div>
+           </div>
+        </div>
+        <div class="level">
+            <img src="./Level/Level (1).png" onclick="Gameplay(1)" width="5%" alt="" id="level-1" class="">
+            <img src="./Level/Level (2).png" onclick="Gameplay(2)" width="5%" alt="" id="level-2" class="inactive">
+            <img src="./Level/Level (3).png" onclick="Gameplay(3)" width="5%" alt="" id="level-3" class="inactive">
+            <img src="./Level/Level (4).png" onclick="Gameplay(4)" width="5%" alt="" id="level-4" class="inactive">
+            <img src="./Level/Level (5).png" onclick="Gameplay(5)" width="5%" alt="" id="level-5" class="inactive">
+        </div>
+    </div>
+    <div class="game" id="game">
+        <canvas id="canvas"></canvas>
+        <div class="lvl" id="lvl-parrent">Level <span id="lvl"></span></div>
+        <div class="canvas-button">
+            <img src="./Asset Lainya/setting.png" alt="" onclick="showPengaturan()">
+            <div class="music">
+                <img src="./Asset Lainya/Asset Music.png"  alt="">
+                <div class="line"></div>
+           </div>
+        </div>
+        <div class="top-card">
+            <img src="./Asset Lainya/Asset Card Back.png" alt="" class="i3" onclick="skipTurn()">
+            <img src="./Asset Lainya/Asset Card Back.png" alt="" class="i2" onclick="skipTurn()">
+            <img src="./Asset Lainya/Asset Front.png" alt="" class="i1" onclick="skipTurn()">
+        </div>
+        <div class="wins" id="win">
+            <div class="back">
+                <div class="title">
+                    <h1>YOU WIN</h1>
+                </div>
+                <img src="./Asset Lainya/Continue.png" width="200px" alt="" onclick="gameContinue()">
+                <img src="./Asset Lainya/Restart Game.png" width="200px" alt="" onclick="gameRestart()">
+                <img src="./Asset Lainya/Quit Game.png" width="200px" alt="" onclick="gameQuit()">
+            </div>
+        </div>
+        <div class="lose" id="lose">
+            <div class="back">
+                <div class="title">
+                    <h1>YOU LOST</h1>
+                </div>
+                <img src="./Asset Lainya/Restart Game.png" width="200px" alt="" onclick="gameRestart()">
+                <img src="./Asset Lainya/Quit Game.png" width="200px" alt="" onclick="gameQuit()">
+            </div>
+        </div>
+        <div class="pengaturan" id="pengaturan">
+            <div class="back">
+                <div class="title">
+                    <h1>Pengaturan</h1>
+                </div>
+                <img src="./Asset Lainya/Continue.png" width="200px" alt="" onclick="gameResume()">
+                <img src="./Asset Lainya/Quit Game.png" width="200px" alt="" onclick="gameQuit()">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="canvas.js"></script>
+<script src="script.js"></script>
+
+</html>

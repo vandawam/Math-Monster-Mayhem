@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.home img{
+    z-index: 2;
+}
+
+.home {
+    background: fixed;
+    background-image: url('./Background/Menu\ Utama.png');
+    z-index: -2;
+    height: 100dvh;
+    width: 100dvw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+
+    .blur {
+        background-image: linear-gradient(transparent, transparent, transparent, white);
+        position: absolute;
+        width: 100%;
+        height: 100dvh;
+    }
+
+    .home-button {
+        width: 100%;
+        align-self: center;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+
+    .music-button {
+        display: flex;
+        margin: 10px;
+        gap: 20px;
+    }
+    
+    .back-profile {
+        display: none;
+        z-index: 3;
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: brightness(50%);
+        font-family: Arial, Helvetica, sans-serif;
+
+        .title {
+            margin-bottom: -50px;
+            z-index: 2;
+            padding: 10px 200px;
+            border-radius: 30px;
+            color: white;
+            font-size: 60px;
+            background-color: rgb(25, 186, 255);
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            width: 900px;
+            background-color: white;
+            height: 500px;
+            border: solid rgb(25, 186, 255) 3px;
+            border-radius: 30px;
+            justify-items: center;
+            align-items: center;
+
+            .back {
+                width: 95%;
+                margin: 20px;
+                margin-bottom: -30;
+            }
+
+            .prof-img {
+                margin-top: -30px;
+                border-radius: 100%;
+                padding: 10px;
+                border: solid blue 3px;
+            }
+
+            h1 {
+                margin-top: 20px;
+                color: rgb(25, 186, 255);
+            }
+
+            .status {
+                display: flex;
+                width: 90%;
+                justify-content: space-between;
+
+                h1 {
+                    font-size: 20px;
+                    margin-top: 20px;
+                    color: black;
+                    text-align: center;
+                }
+                h2 {
+                    font-size: 30px;
+                    color: rgb(25, 186, 255);
+                    text-align: center;
+                }
+
+                .achiv{
+                    gap: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .level{
+                    gap: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .unik-id{
+                    gap: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+}
+
+.map-level {
+    background-image: url('./Background/Map.png');
+    background-position: center;
+    overflow: hidden;
+    display: none;
+    background-size: 100% 100%;
+    width: 100dvw;
+    height: 100dvh;
+
+    .level {
+        width: 100%;
+        height: 100%;
+
+        #level-1 {
+            position: absolute;
+            transform: translateY(540%) translateX(170%);
+        }
+
+        #level-2 {
+            position: absolute;
+            transform: translateY(230%) translateX(320%);
+        }
+
+        #level-3 {
+            position: absolute;
+            transform: translateY(370%) translateX(800%);
+        }
+
+        #level-4 {
+            position: absolute;
+            transform: translateY(350%) translateX(1550%);
+        }
+
+        #level-5 {
+            position: absolute;
+            transform: translateY(600%) translateX(1750%);
+        }
+    }
+
+    .map-button {
+        display: flex;
+        margin: 30px;
+        position: absolute;
+        width: 4%;
+    }
+
+    .map-title {
+        display: flex;
+        margin: 0px;
+        padding-top: 30px;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: end;
+
+    .canvas-button {
+        position: absolute;
+        margin: 30px;
+        align-self: flex-end;
+        gap: 20px;
+        display: flex;
+
+        img {
+            filter: saturate(50%);
+        }
+    }
+
+    .lvl {
+        position: absolute;
+        bottom: 90px;
+        right: 15px;
+        padding: 5px;
+        display: flex;
+        width: 150px;
+        background-color: white;
+        border: solid #1036FF 3px;
+        color: #1036FF;
+        font-weight: bolder;
+        font-size: 30px;
+        border-radius: 10px;
+        justify-items: center;
+        justify-content: center;
+        gap: 10px;
+    }     
+    
+    .top-card {
+        margin-top: 10px;
+        position: absolute;
+
+        img {
+            width: 70px;
+        }
+
+        .i1 {
+            transform: translateX(-70px);
+        }
+
+        .i2 {
+            transform: translateX(20px);
+        }
+
+        .i3 {
+            transform: translateX(110px);
+        }
+    }
+}
+
+.pengaturan {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(50%);
+    font-family: Arial, Helvetica, sans-serif;
+
+    .back {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background-color: white;
+        height: 200px;
+        border: solid rgb(25, 186, 255) 3px;
+        border-radius: 30px;
+        justify-items: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .title {
+        position: absolute;
+        margin-top: -100px;
+        z-index: 2;
+        padding: 10px 100px;
+        border-radius: 30px;
+        color: white;
+        font-size: 30px;
+        background-color: rgb(25, 186, 255);
+    }
+}
+.wins {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(50%);
+    font-family: Arial, Helvetica, sans-serif;
+
+    .back {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background-color: white;
+        height: 300px;
+        border: solid rgb(25, 186, 255) 3px;
+        border-radius: 30px;
+        justify-items: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .title {
+        position: absolute;
+        margin-top: -100px;
+        z-index: 2;
+        padding: 10px 100px;
+        border-radius: 30px;
+        color: white;
+        font-size: 30px;
+        background-color: rgb(25, 186, 255);
+    }
+}
+
+.lose {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(50%);
+    font-family: Arial, Helvetica, sans-serif;
+
+    .back {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background-color: white;
+        height: 200px;
+        border: solid rgb(25, 186, 255) 3px;
+        border-radius: 30px;
+        justify-items: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .title {
+        position: absolute;
+        margin-top: -100px;
+        z-index: 2;
+        padding: 10px 100px;
+        border-radius: 30px;
+        color: white;
+        font-size: 30px;
+        background-color: rgb(255, 25, 25);
+    }
+}
+
+.inactive {
+    filter: saturate(0%);
+    pointer-events: none;
+}
+
+ .music{
+    position: relative;
+}
+ .music.active .line{
+    width: 4px;
+    height: 70%;
+    bottom: 23%;
+    right: 45%;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transform:  rotate(45deg);
+}
+
+.music-button img, .map-button img, .canvas-button img{
+    width: 50px;
+    height: 50px;
+}
+
